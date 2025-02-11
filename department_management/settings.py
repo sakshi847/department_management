@@ -132,3 +132,6 @@ CSRF_COOKIE_HTTPONLY = False
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_COOKIE_AGE = 3600  
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True  
+
+
+ALLOWED_HOSTS = ['department-management-fl51.onrender.com', 'localhost', '127.0.0.1']
