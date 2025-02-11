@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Inactivation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        .confirmation-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .confirmation-container form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .confirmation-container button {
+            padding: 10px 20px;
+            background-color: #f44336;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .confirmation-container button:hover {
+            background-color: #e53935;
+        }
+
+        .confirmation-container a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .confirmation-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Are you sure you want to mark this department inactive?</h3>
+
+    <div class="confirmation-container">
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Yes, Inactivate</button>
+        </form>
+        <a href="{% url 'department_list' %}">Cancel</a>
+    </div>
+
+</body>
+</html>
+
+
+
